@@ -1,0 +1,35 @@
+floor_list_stuvi2 = [Floor(10,20,1),Floor(10,30,2),Floor(30,80,26)]
+StuVi1 = Building(floor_list_stuvi2,26,"Dorm","N/a","StuVi2","33 Harry Agganis Way")
+
+floor_list_rich = [Floor(47,80,1)]
+Rich = Building(floor_list_rich,13,"Dorm","N/a","Rich Hall","277 Babcock Street")
+
+floor_list_sleeper = [Floor(12,30,2)]
+Sleeper = Building(floor_list_sleeper,13,"Dorm","N/a","Sleeper Hall","275 Babcock Street")
+
+floor_list_claflin = [Floor(18,30,1)]
+Claflin = Building(floor_list_claflin,13,"Dorm","N/a","Claflin Hall","273 Babcock Street")
+
+floor_list_1019 = [Floor(8,20,2)]
+TenNineteen = Building(floor_list_1019,6,"Dorm","N/a","1019 Commonwealth Ave","1019 Commonwealth Avenue")
+
+floor_list_warren = [Floor(37,40,4)]
+Warren = Building(floor_list_warren,18,"Dorm","Food","Warren Towers","700 Commonwealth Avenue")
+
+floor_list_towers = [Floor(28,30,1),Floor(38,40,2)]
+Towers = Building(floor_list_towers,9,"Dorm","N/a","The Towers","140 Bay State Road")
+
+floor_list_myles = [Floor(9,20,1)]
+Myles = Building(floor_list_myles,9,"Dorm","N/a","Myles Standish Hall","610 Beacon Street")
+
+floor_list_kilachand = [Floor(45,75,1)]
+Kilachand = Building(floor_list_kilachand,9,"Dorm","N/a","Kilachand Hall","91 Bay State Road")
+
+floor_list_danielsen = [Floor(17,20,1)]
+Danielsen = Building(floor_list_danielsen,10,"Dorm","N/a","Danielsen Hall","512 Beacon Street")
+
+floor_list_mugar = [Floor(85,115,1),Floor(198,206,2),Floor(65,80,3),Floor(55,80,4),Floor(28,50,5),Floor(18,40,6)]
+Mugar = Building(floor_list_mugar,6,"Library","N/a","Mugar Library","771 Commonwealth Avenue")
+
+floor_list_gsu = [Floor(145,250,1),Floor(78,125,2),Floor(80,60,3)]
+GSU = Building(floor_list_gsu,3,"Food","Study","George Sherman Union","775 Commonwealth Avenue")
