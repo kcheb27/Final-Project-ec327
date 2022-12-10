@@ -1,25 +1,34 @@
 
 class Floor:
 
-    def __init__(self):
-        self.population = 3        
-        self.capacity = 4
+    def __init__(self,pop,cap,floor_no):
+        self.population = pop      
+        self.capacity = cap
+        self.level = floor_no
 
 
 class Building:
     
-    def __init__(self,floors):
+    def __init__(self,floors,amount_floors,buildingtype,subtype,name,address):
+
         
-        self.capacity = 100 
-        self.no_floor = 0
+        self.no_floor = amount_floors
         self.floor_study = floors
         self.no_floors_study = len(floors)
+        self.capacity = 0
         self.population = 0
-        self.type = "a"
-        self.buildingname = "building"
-        self.subtype = "b"
-        self.address = "141 nonexistent st."
-#Building class Must pass (int capacty, int.no_floor, int floor_study, string building name, string building type, string subtype, string address)
+        for x in floors:
+            self.capacity = self.capacity + x.capacity
+            self.population = self.population + x.population
+
+        self.type = buildingtype
+        self.buildingname = name
+        self.subtype = subtype
+        self.address = address
+
  
+
+
+
 
  
