@@ -23,15 +23,15 @@ Yawkey = Building(floor_list5,6,"School","Food","Yawkey","100 Bay State Road")
 floor_list13 = [Floor(165,200,1),Floor(185,200,2)]
 Howard_Therman_Center = Building(floor_list13, 5, "Study", "N/a", "Howard Therman Center", "808 Commonwealth Ave")
 floor_list14 = [Floor(35,50,0),Floor(18,30,1), Floor(12,30,2),Floor(8,20,3),Floor(7,30,4),Floor(9,20,5)]
-CAS = Building(floor_list14, 5, "School", "N/a", "CAS", "725 Commonwealth Ave")
+Cas = Building(floor_list14, 5, "School", "N/a", "CAS", "725 Commonwealth Ave")
 floor_list15 = [Floor(45,80,1),Floor(22,40,2), Floor(18,30,3)]
-CFA = Building(floor_list15,5,"School","N/a","CFA", "855 Commonwealth Ave")
+Cfa = Building(floor_list15,5,"School","N/a","CFA", "855 Commonwealth Ave")
 floor_list16 = [Floor(22,40,1),Floor(18,30,2), Floor(11,20,3)]
-CGS = Building(floor_list16,4, "School","N/a","CGS","871 Commonwealth Ave")
+Cgs = Building(floor_list16,4, "School","N/a","CGS","871 Commonwealth Ave")
 floor_list17 = [Floor(18,30,1),Floor(22,40,2)]
-COM = Building(floor_list17, 3, "School","N/a","COM","640 Commonwealth Ave")
+Com = Building(floor_list17, 3, "School","N/a","COM","640 Commonwealth Ave")
 floor_list18 = [Floor(6,10,1),Floor(65,100,2)]
-EPIC = Building(floor_list18, 2, "School", "N/a", "EPIC", "750 Commonwealth Ave")
+Epic = Building(floor_list18, 2, "School", "N/a", "EPIC", "750 Commonwealth Ave")
 
 floor_list_stuvi2 = [Floor(10,20,1),Floor(10,30,2),Floor(30,80,26)]
 StuVi1 = Building(floor_list_stuvi2,26,"Dorm","N/a","StuVi2","33 Harry Agganis Way")
@@ -67,8 +67,16 @@ floor_list_mugar = [Floor(85,115,1),Floor(198,206,2),Floor(65,80,3),Floor(55,80,
 Mugar = Building(floor_list_mugar,6,"Library","N/a","Mugar Library","771 Commonwealth Avenue")
 
 floor_list_gsu = [Floor(145,250,1),Floor(78,125,2),Floor(80,60,3)]
-GSU = Building(floor_list_gsu,3,"Food","Study","George Sherman Union","775 Commonwealth Avenue")
+Gsu = Building(floor_list_gsu,3,"Food","Study","George Sherman Union","775 Commonwealth Avenue")
 
+floor_list19 = [Floor(62,80,1),Floor(63,100,2),Floor(79,150,3),Floor(26,40,4),Floor(9,20,5),Floor(0,20,6),Floor(23,150,7)]
+Questrom = Building(floor_list19, 7, "School", "N/a", "Questrom", "595 Commonwealth Ave")
+
+floor_list20 = [Floor(12,60,1),Floor(89,100,2),Floor(49,150,3),Floor(63,50,4),Floor(4,20,5)]
+Law =Building(floor_list20,16,"School", "N/a","LAW", "765 Commonwealth")
+
+floor_list21=[Floor(37,80,1),Floor(3,20,2),Floor(9,20,3)]
+Lse = Building(floor_list21,3,"School","N/a","LSE","24 Cummington Mall")
 
 app = Flask(__name__)
 
