@@ -4,7 +4,7 @@ from classes import Building
 
 
 #example Building make: StuVi 1
-floor_list1 = [Floor(10,20,1),Floor(10,30,2)]
+floor_list1 = [Floor(10,20,1),Floor(10,30,2),Floor(30,80,26)]
 StuVi1 = Building(floor_list1,26,"Dorm","N/a","StuVi1","33 Harry Agganis Way")
 
 floor_list2 = [Floor(38,40,0),Floor(19,20,1),Floor(18,20,2),Floor(8,10,3)]
