@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        #object1{
+            max-width: fit-content;
+            max-height: 50px;
+
+            float:right
+        }
+        #object2{
+            max-width: fit-content;
+            max-height: 400px;
+        }
+        hr {
+        height:5px;
+        border-width:0;
+        background-color:#000000;
+        }
+    </style>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{Page}}</title>
+</head>
+<body style="background-color: blanchedalmond;">
+    
+    <div>
+        
+        <h1 style = "float:none; min-height:50px;color: white;background-color: darkred;border-color: black;">
+            
+            {{Page}}
+            <img  src ="{{image}}" id = "object1"/>
+        </h1>
+        <!--- this is where you change stuff-->
+        <img src ="{{image2}}" id ="object2" />
+        <hr>
+
+        <h2>
+            {{Page}} current status: {{population}} / {{capacity}} people
+        </h2>
+        
+        <h3>
+            <br>Building type: {{BuildingType}} , {{subtype}}
+            <br>Address is: {{address}}
+        </h3>
+        <hr>
+        <h3>
+
+            number of floors: {{number_floors}}
+            <br>number of study floors:{{number_studyfloors}}
+            <br>
+
+        </h3>
+        <p1>
+        {%for i in range(0, number_studyfloors)%}
+        <br> floor number: {{current_floor[i]}}
+        <br> Status: {{current_pop[i]}} / {{current_cap[i]}} people
+        {%endfor%}
+        </p1>
+        
+        <hr>
+        <p1>
+            <a href="{{ url_for('home')}}"><h2>Click this to go back to main page</h2></a>
+        </p1>    
+
+
+
+        <!--    please dont touch anywhere else-->
+        
+
+    </div>
+    
+
+</body>
+</html>
