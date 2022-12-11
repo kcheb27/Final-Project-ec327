@@ -34,8 +34,7 @@ Com = Building(floor_list17, 3, "School","N/a","COM","640 Commonwealth Ave")
 floor_list18 = [Floor(6,10,1),Floor(65,100,2)]
 Epic = Building(floor_list18, 2, "School", "N/a", "EPIC", "750 Commonwealth Ave")
 
-floor_list_stuvi2 = [Floor(10,20,1),Floor(10,30,2),Floor(30,80,26)]
-StuVi1 = Building(floor_list_stuvi2,26,"Dorm","N/a","StuVi2","33 Harry Agganis Way")
+
 
 floor_list_rich = [Floor(47,80,1)]
 Rich = Building(floor_list_rich,13,"Dorm","N/a","Rich Hall","277 Babcock Street")
@@ -85,4 +84,9 @@ def home():
 @app.route("/GSU")
 def gsu():
     pic1 = os.path.join(app.config['UPLOAD_FOLDER'],'bulogo.png')
-    return render_template("GSU.html",image =pic1,Page = Gsu.buildingname,capacity = Gsu.capacity)
+    return render_template("GSU.html",image =pic1,Page = Gsu.buildingname,capacity = Gsu.capacity,POP = Gsu.capacity,floors = Gsu.no_floor,study_floors = Gsu.no_floors_study,floor_number = Gsu.floor_study[0].level,capacityfloor1 = Gsu.floor_study[0].capacity,populationfloor1 = Gsu.floor_study[0].population,Buildingtype = Gsu.type,Buildingsubtype = Gsu.subtype)
+
+@app.route("/HTC")
+def HTC():
+    pic1 = os.path.join(app.config['UPLOAD_FOLDER'],'bulogo.png')
+    return render_template("HTC.html",image =pic1,Page = Gsu.buildingname,capacity = Gsu.capacity,POP = Gsu.capacity,floors = Gsu.no_floor,study_floors = Gsu.no_floors_study,floor_number = Gsu.floor_study[0].level,capacityfloor1 = Gsu.floor_study[0].capacity,populationfloor1 = Gsu.floor_study[0].population,Buildingtype = Gsu.type,Buildingsubtype = Gsu.subtype)
