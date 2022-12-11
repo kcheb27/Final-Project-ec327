@@ -68,7 +68,7 @@ floor_list_mugar = [Floor(85,115,1),Floor(198,206,2),Floor(65,80,3),Floor(55,80,
 Mugar = Building(floor_list_mugar,6,"Library","N/a","Mugar Library","771 Commonwealth Avenue")
 
 floor_list_gsu = [Floor(145,250,1),Floor(78,125,2),Floor(80,60,3)]
-GSU = Building(floor_list_gsu,3,"Food","Study","George Sherman Union","775 Commonwealth Avenue")
+Gsu = Building(floor_list_gsu,3,"Food","Study","George Sherman Union","775 Commonwealth Avenue")
 
 floor_list21=[Floor(37,80,1),Floor(3,20,2),Floor(9,20,3)]
 Lse = Building(floor_list21,3,"School","N/a","LSE","24 Cummington Mall")
@@ -85,5 +85,4 @@ def home():
 @app.route("/GSU")
 def gsu():
     pic1 = os.path.join(app.config['UPLOAD_FOLDER'],'bulogo.png')
-   
-    return render_template("GSU.html",image =pic1,Page = GSU.buildingname,capacity = GSU.capacity)
+    return render_template("GSU.html",image =pic1,Page = Gsu.buildingname,capacity = Gsu.capacity)
