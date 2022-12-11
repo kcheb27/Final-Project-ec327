@@ -25,8 +25,8 @@ class Building:
         self.buildingname = name
         self.subtype = subtype
         self.address = address
-        self.x = x
-        self.y = y
+        self.x_loc = x
+        self.y_loc = y
         self.distance = 0
  
 
