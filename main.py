@@ -84,9 +84,9 @@ def home():
 @app.route("/GSU")
 def gsu():
     pic1 = os.path.join(app.config['UPLOAD_FOLDER'],'bulogo.png')
-    return render_template("GSU.html",image =pic1,Page = Gsu.buildingname,capacity = Gsu.capacity,POP = Gsu.capacity,floors = Gsu.no_floor,study_floors = Gsu.no_floors_study,floor_number = Gsu.floor_study[0].level,capacityfloor1 = Gsu.floor_study[0].capacity,populationfloor1 = Gsu.floor_study[0].population,Buildingtype = Gsu.type,Buildingsubtype = Gsu.subtype)
+    return render_template("GSU.html",image =pic1,Page = Gsu.buildingname,capacity = Gsu.capacity)
 
-@app.route("/HTC")
+@app.route("/HTC") 
 def HTC():
     pic1 = os.path.join(app.config['UPLOAD_FOLDER'],'bulogo.png')
     return render_template("HTC.html",image =pic1,Page = Gsu.buildingname,capacity = Gsu.capacity,POP = Gsu.capacity,floors = Gsu.no_floor,study_floors = Gsu.no_floors_study,floor_number = Gsu.floor_study[0].level,capacityfloor1 = Gsu.floor_study[0].capacity,populationfloor1 = Gsu.floor_study[0].population,Buildingtype = Gsu.type,Buildingsubtype = Gsu.subtype)
