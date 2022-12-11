@@ -8,6 +8,12 @@
 
             float:right
         }
+        #object2{
+            max-width: fit-content;
+            max-height: 400px;
+           
+          
+        }
         hr {
         height:5px;
         border-width:0;
@@ -31,12 +37,20 @@
         </h1>
 
         
-
-
-
+        <center>
+        <img src = "{{image2}}" id = "object2"/>
+        <h2>
+            BU Study Information
+        </h2>
+        </center>
+        <b1>
+            This webpage was designed to help you choose where to study! simply click the button below to choose between the different buildings in boston university. then click on the link to see the availibity of each building! There you will see the what type of functionality the building offers, Moreover it will allow you see the occupancy of each floor and the overall ocupancy of the building.
+        </b1>   
         <!--- this is where you change stuff-->
         <center>
-        <button onclick="myFunction()"style="font-family:Comic Sans MS;height: 200px; width: 400px; "><font size="10">Display Building Options</font></button>
+            
+            <hr>
+        <button onclick="myFunction()"style="font-family:Comic Sans MS;height: 100px; width: 200px; "><font size="4">Display Building Options</font></button>
         <p id="text" style="display:none">
             <a href="{{url_for('gsu')}}">GSU</a>
             <br><a href="{{url_for('stuvi1')}}">StuVi1</a>

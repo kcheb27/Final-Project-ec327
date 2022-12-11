@@ -84,12 +84,14 @@ app.config['UPLOAD_FOLDER'] = picFolder
 @app.route("/")
 def home():
     pic1 = os.path.join(app.config['UPLOAD_FOLDER'],'bulogo.png')
-    return render_template("index.html",name ="Tim",image =pic1,Page = "Home Page")
+    pic2 = os.path.join(app.config['UPLOAD_FOLDER'],'THEHAND.jpg')
+    return render_template("index.html",name ="Tim",image =pic1,Page = "Home Page",image2 = pic2)
 
 @app.route("/unhinged")
 def home2():
-    pic1 = os.path.join(app.config['UPLOAD_FOLDER'],'betterbulogo.png')
-    return render_template("unhinged.html",name ="Tim",image =pic1,Page = "Home Page")    
+    pic1 = os.path.join(app.config['UPLOAD_FOLDER'],'betterbetterbulogo.png')
+    pic2 = os.path.join(app.config['UPLOAD_FOLDER'],'betterbulogo.png')
+    return render_template("unhinged.html",name ="Tim",image =pic1,Page = "IGGGGGGGGGYYYYYY",image2 = pic2)    
 
 floornumber = []
 floorcap = []
