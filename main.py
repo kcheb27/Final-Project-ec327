@@ -3,6 +3,13 @@ from classes import Floor
 from classes import Building
 import os
 
+
+
+
+
+
+
+
 #example Building make: StuVi 1
 #implement the objects into the initialization of a model class
 floor_list1 = [Floor(10,20,1),Floor(10,30,2),Floor(30,80,26)]
