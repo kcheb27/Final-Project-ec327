@@ -79,6 +79,7 @@ Law = Building(floor_list_law,16,"School","N/a","Law Building","765 Commonwealth
 app = Flask(__name__)
 picFolder = os.path.join('static','pics')
 
+
 app.config['UPLOAD_FOLDER'] = picFolder
 
 @app.route("/")
