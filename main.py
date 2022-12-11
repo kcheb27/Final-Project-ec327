@@ -81,13 +81,26 @@ app.config['UPLOAD_FOLDER'] = picFolder
 def home():
     pic1 = os.path.join(app.config['UPLOAD_FOLDER'],'bulogo.png')
     return render_template("index.html",name ="Tim",image =pic1,Page = "Home Page")
+
+floornumber = []
+floorcap = []
+floorpop = []
+#######################
+floornumber.clear()
+floorcap.clear()
+floorpop.clear()
+for x in range(0,Gsu.no_floors_study):
+    floornumber.append(Gsu.floor_study[x].level)
+    floorcap.append(Gsu.floor_study[x].capacity)
+    floorpop.append(Gsu.floor_study[x].population)
+
 @app.route("/GSU")
 def gsu():
     pic1 = os.path.join(app.config['UPLOAD_FOLDER'],'bulogo.png')
     pic2 = os.path.join(app.config['UPLOAD_FOLDER'],'gsu.jpg')
-    return render_template("GSU.html",image =pic1,image2=pic2,Page = Gsu.buildingname,capacity = Gsu.capacity,population = Gsu.population)
+    return render_template("GSU.html",image =pic1,image2=pic2,Page = Gsu.buildingname,capacity = Gsu.capacity,population = Gsu.population,number_floors = Gsu.no_floor,number_studyfloors = Gsu.no_floors_study,current_floor = floornumber,current_pop=floorpop,current_cap=floorcap,BuildingType = Gsu.type,subtype = Gsu.subtype,address = Gsu.address)
+############################# THE TRUTH##################################
 
-@app.route("/HTC") 
-def HTC():
-    pic1 = os.path.join(app.config['UPLOAD_FOLDER'],'bulogo.png')
-    return render_template("HTC.html",image =pic1,Page = Gsu.buildingname,capacity = Gsu.capacity,POP = Gsu.capacity,floors = Gsu.no_floor,study_floors = Gsu.no_floors_study,floor_number = Gsu.floor_study[0].level,capacityfloor1 = Gsu.floor_study[0].capacity,populationfloor1 = Gsu.floor_study[0].population,Buildingtype = Gsu.type,Buildingsubtype = Gsu.subtype)
+
+###############################EVERYTHING ELSE CAN GO DIE#################################################
+

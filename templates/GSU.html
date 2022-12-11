@@ -37,12 +37,30 @@
         <hr>
 
         <h2>
-            {{Page}} current status: {{population}} / {{capacity}}
+            {{Page}} current status: {{population}} / {{capacity}} people
         </h2>
+        
+        <h3>
+            <br>Building type: {{BuildingType}} , {{subtype}}
+            <br>Address is: {{address}}
+        </h3>
+        <hr>
+        <h3>
 
+            number of floors: {{number_floors}}
+            <br>number of study floors:{{number_studyfloors}}
+            <br>
+
+        </h3>
         <p1>
-
-
+        {%for i in range(0, number_studyfloors)%}
+        <br> floor number: {{current_floor[i]}}
+        <br> Status: {{current_pop[i]}} / {{current_cap[i]}} people
+        {%endfor%}
+        </p1>
+        
+        <hr>
+        <p1>
             <a href="{{ url_for('home')}}"><h2>Click this to go back to main page</h2></a>
         </p1>    
 
