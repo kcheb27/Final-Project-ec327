@@ -99,7 +99,7 @@ def get_location():
 location_data = get_location()
 distances = []
 for x in range(0,24):
-    building_list[x].distance = math.sqrt(pow((building_list[x].x - location_data[0]),2) + pow((building_list[y].y - location_data[1]),2))
+    building_list[x].distance = math.sqrt(pow((building_list[x].x - location_data[0]),2) + pow((building_list[x].y - location_data[1]),2))
     distances.append(building_list[x].distance)
 
 for x in range(0,24):
