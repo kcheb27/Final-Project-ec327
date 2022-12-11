@@ -2,6 +2,8 @@ from flask import Flask,render_template
 from classes import Floor
 from classes import Building
 import os
+import requests
+import math
 
 #example Building make: StuVi 1
 #implement the objects into the initialization of a model class
@@ -82,6 +84,33 @@ building_list = [StuVi1, Metcalf, Photonics, Wheelock, Yawkey, Howard_Therman_Ce
 app = Flask(__name__)
 picFolder = os.path.join('static','pics')
 
+def get_ip():
+        response = requests.get('https://api64.ipify.org?format=json').json()
+        return response["ip"]
+
+def get_location():
+        ip_address = get_ip()
+        response = requests.get(f'https://ipapi.co/{ip_address}/json/').json()
+        user_y = response.get("latitude")
+        user_x = response.get("longitude")
+        location_data = [user_x,user_y]
+        return location_data
+
+location_data = get_location()
+distances = []
+for x in range(0,24):
+    building_list[x].distance = math.sqrt(pow((building_list[x].x - location_data[0]),2) + pow((building_list[y].y - location_data[1]),2))
+    distances.append(building_list[x].distance)
+
+for x in range(0,24):
+    if (min(distances) == building_list[x].distance):
+        closest_building = building_list[x]
+        break
+
+
+
+
+
 
 app.config['UPLOAD_FOLDER'] = picFolder
 
@@ -89,7 +118,7 @@ app.config['UPLOAD_FOLDER'] = picFolder
 def home():
     pic1 = os.path.join(app.config['UPLOAD_FOLDER'],'bulogo.png')
     pic2 = os.path.join(app.config['UPLOAD_FOLDER'],'THEHAND.jpg')
-    return render_template("index.html",name ="Tim",image =pic1,Page = "Home Page",image2 = pic2)
+    return render_template("index.html",name ="Tim",image =pic1,Page = "Home Page",image2 = pic2,building_name = closest_building.buildingname)
 
 @app.route("/unhinged")
 def home2():

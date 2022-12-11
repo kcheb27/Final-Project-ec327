@@ -27,6 +27,7 @@ class Building:
         self.address = address
         self.x = x
         self.y = y
+        self.distance = 0
  
 
 
