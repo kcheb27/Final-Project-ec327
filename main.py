@@ -82,7 +82,8 @@ app.config['UPLOAD_FOLDER'] = picFolder
 def home():
     pic1 = os.path.join(app.config['UPLOAD_FOLDER'],'bulogo.png')
     return render_template("index.html",name ="Tim",image =pic1,Page = "Home Page")
-@app.route("/home")
-def test():
+@app.route("/GSU")
+def gsu():
     pic1 = os.path.join(app.config['UPLOAD_FOLDER'],'bulogo.png')
-    return render_template("index.html",image =pic1,Page = GSU.buildingname,capacity = GSU.capacity)
+   
+    return render_template("GSU.html",image =pic1,Page = GSU.buildingname,capacity = GSU.capacity)
