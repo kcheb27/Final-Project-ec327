@@ -9,7 +9,7 @@ class Floor:
 
 class Building:
     
-    def __init__(self,floors,amount_floors,buildingtype,subtype,name,address):
+    def __init__(self,floors,amount_floors,buildingtype,subtype,name,address,x,y):
 
         
         self.no_floor = amount_floors
@@ -25,8 +25,8 @@ class Building:
         self.buildingname = name
         self.subtype = subtype
         self.address = address
-        #self.x = x
-        #self.y = y
+        self.x = x
+        self.y = y
  
 
 
