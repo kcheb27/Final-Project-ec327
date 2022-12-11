@@ -86,6 +86,11 @@ def home():
     pic1 = os.path.join(app.config['UPLOAD_FOLDER'],'bulogo.png')
     return render_template("index.html",name ="Tim",image =pic1,Page = "Home Page")
 
+@app.route("/unhinged")
+def home2():
+    pic1 = os.path.join(app.config['UPLOAD_FOLDER'],'betterbulogo.png')
+    return render_template("unhinged.html",name ="Tim",image =pic1,Page = "Home Page")    
+
 floornumber = []
 floorcap = []
 floorpop = []
