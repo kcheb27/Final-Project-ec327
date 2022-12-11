@@ -98,14 +98,14 @@ def get_location():
 
 location_data = get_location()
 distances = []
-for x in range(0,24):
-    building_list[x].distance = math.sqrt(pow((building_list[x].x_loc - location_data[0]),2) + pow((building_list[x].y_loc - location_data[1]),2))
-    distances.append(building_list.distance[x])
+#for x in range(0,24):
+    #building_list[x].distance = math.sqrt(pow((building_list[x].x_loc - location_data[0]),2) + pow((building_list[x].y_loc - location_data[1]),2))
+    #distances.append(building_list.distance[x])
 
-for x in range(0,24):
-    if (min(distances) == building_list.distance[x]):
-        closest_building = building_list[x]
-        break
+#for x in range(0,24):
+#    if (min(distances) == building_list.distance[x]):
+#        closest_building = building_list[x]
+#        break
 
 
 
