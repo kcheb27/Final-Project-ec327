@@ -84,7 +84,8 @@ def home():
 @app.route("/GSU")
 def gsu():
     pic1 = os.path.join(app.config['UPLOAD_FOLDER'],'bulogo.png')
-    return render_template("GSU.html",image =pic1,Page = Gsu.buildingname,capacity = Gsu.capacity)
+    pic2 = os.path.join(app.config['UPLOAD_FOLDER'],'gsu.jpg')
+    return render_template("GSU.html",image =pic1,image2=pic2,Page = Gsu.buildingname,capacity = Gsu.capacity,population = Gsu.population)
 
 @app.route("/HTC") 
 def HTC():
