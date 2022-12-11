@@ -1,9 +1,10 @@
-from flask import Flask
+from flask import Flask,render_template
 from classes import Floor
 from classes import Building
-
+import os
 
 #example Building make: StuVi 1
+#implement the objects into the initialization of a model class
 floor_list1 = [Floor(10,20,1),Floor(10,30,2),Floor(30,80,26)]
 StuVi1 = Building(floor_list1,26,"Dorm","N/a","StuVi1","33 Harry Agganis Way")
 
@@ -67,25 +68,21 @@ floor_list_mugar = [Floor(85,115,1),Floor(198,206,2),Floor(65,80,3),Floor(55,80,
 Mugar = Building(floor_list_mugar,6,"Library","N/a","Mugar Library","771 Commonwealth Avenue")
 
 floor_list_gsu = [Floor(145,250,1),Floor(78,125,2),Floor(80,60,3)]
-Gsu = Building(floor_list_gsu,3,"Food","Study","George Sherman Union","775 Commonwealth Avenue")
-
-floor_list19 = [Floor(62,80,1),Floor(63,100,2),Floor(79,150,3),Floor(26,40,4),Floor(9,20,5),Floor(0,20,6),Floor(23,150,7)]
-Questrom = Building(floor_list19, 7, "School", "N/a", "Questrom", "595 Commonwealth Ave")
-
-floor_list20 = [Floor(12,60,1),Floor(89,100,2),Floor(49,150,3),Floor(63,50,4),Floor(4,20,5)]
-Law =Building(floor_list20,16,"School", "N/a","LAW", "765 Commonwealth")
+GSU = Building(floor_list_gsu,3,"Food","Study","George Sherman Union","775 Commonwealth Avenue")
 
 floor_list21=[Floor(37,80,1),Floor(3,20,2),Floor(9,20,3)]
 Lse = Building(floor_list21,3,"School","N/a","LSE","24 Cummington Mall")
 
 app = Flask(__name__)
+picFolder = os.path.join('static','pics')
 
+app.config['UPLOAD_FOLDER'] = picFolder
 
-
-
-
-print("hello")
-
-@app.route('/upload',methods=["GET", "POST"])
-def hello():
-    return '<h1>Hello, cheese!</h1>'
+@app.route("/")
+def home():
+    pic1 = os.path.join(app.config['UPLOAD_FOLDER'],'bulogo.png')
+    return render_template("index.html",name ="Tim",image =pic1,Page = "Home Page")
+@app.route("/home")
+def test():
+    pic1 = os.path.join(app.config['UPLOAD_FOLDER'],'bulogo.png')
+    return render_template("index.html",image =pic1,Page = GSU.buildingname,capacity = GSU.capacity)
