@@ -5,6 +5,7 @@ import os
 
 #example Building make: StuVi 1
 #implement the objects into the initialization of a model class
+
 floor_list1 = [Floor(10,20,1),Floor(10,30,2),Floor(30,80,26)]
 StuVi1 = Building(floor_list1,26,"Dorm","N/a","StuVi1","33 Harry Agganis Way",71.1159,42.3524)
 
@@ -76,6 +77,7 @@ Questrom = Building(floor_list_questrom,7,"School","N/a","Questrom School of Bus
 floor_list_law = [Floor(12,60,1),Floor(89,100,2),Floor(49,150,3),Floor(63,50,4),Floor(4,20,5)]
 Law = Building(floor_list_law,16,"School","N/a","Law Building","765 Commonwealth Avenue",71.1071,42.3509)
 
+building_list = [StuVi1, Metcalf, Photonics, Wheelock, Yawkey, Howard_Therman_Center, Cas, Cfa, Cgs, Com, Epic, Rich, Sleeper, Claflin, TenNineteen, Warren, Towers, Myles, Kilachand, Danielsen, Mugar, Gsu, Lse, Questrom, Law]
 
 app = Flask(__name__)
 picFolder = os.path.join('static','pics')

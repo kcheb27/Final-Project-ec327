@@ -1,0 +1,71 @@
+floor_list1 = [Floor(10,20,1),Floor(10,30,2),Floor(30,80,26)]
+StuVi1 = Building(floor_list1,26,"Dorm","N/a","StuVi1","33 Harry Agganis Way",71.1159,42.3524)
+
+floor_list2 = [Floor(38,40,0),Floor(19,20,1),Floor(18,20,2),Floor(8,10,3)]
+Metcalf = Building(floor_list2,3,"School","N/a","Metcalf","1 Silber Way",71.1003,42.3486)
+
+floor_list3 = [Floor(12,60,1),Floor(23,40,2),Floor(12,30,3,),Floor(8,20,4),Floor(7,20,5),Floor(15,20,6),Floor(12,20,7)]
+Photonics = Building(floor_list3,9,"School","N/a","Photonics","8 St. Mary's Street",71.1006,42.3492)
+
+floor_list4 = [Floor(16,30,1),Floor(18,30,2)]
+Wheelock = Building(floor_list4,3,"School","N/a","Wheelock","2 Silber Way",71.1006,42.3497)
+
+floor_list5 = [Floor(9,10,1),Floor(0,10,2),Floor(23,40,3),Floor(13,30,4),Floor(15,30,5),Floor(19,30,6)]
+Yawkey = Building(floor_list5,6,"School","Food","Yawkey","100 Bay State Road",71.0975,42.3498)
+
+
+floor_list13 = [Floor(165,200,1),Floor(185,200,2)]
+Howard_Therman_Center = Building(floor_list13, 5, "Study", "N/a", "Howard Therman Center", "808 Commonwealth Ave",71.10904,42.35075)
+floor_list14 = [Floor(35,50,0),Floor(18,30,1), Floor(12,30,2),Floor(8,20,3),Floor(7,30,4),Floor(9,20,5)]
+Cas = Building(floor_list14, 5, "School", "N/a", "CAS", "725 Commonwealth Ave",71.1054,42.3503)
+floor_list15 = [Floor(45,80,1),Floor(22,40,2), Floor(18,30,3)]
+Cfa = Building(floor_list15,5,"School","N/a","CFA", "855 Commonwealth Ave",71.1139,42.3513)
+floor_list16 = [Floor(22,40,1),Floor(18,30,2), Floor(11,20,3)]
+Cgs = Building(floor_list16,4, "School","N/a","CGS","871 Commonwealth Ave",71.1146,42.3515)
+floor_list17 = [Floor(18,30,1),Floor(22,40,2)]
+Com = Building(floor_list17, 3, "School","N/a","COM","640 Commonwealth Ave",71.1025,42.3489)
+floor_list18 = [Floor(6,10,1),Floor(65,100,2)]
+Epic = Building(floor_list18, 2, "School", "N/a", "EPIC", "750 Commonwealth Ave",71.1079,42.3499)
+
+floor_list_rich = [Floor(47,80,1)]
+Rich = Building(floor_list_rich,13,"Dorm","N/a","Rich Hall","277 Babcock Street",71.1205,42.3535)
+
+floor_list_sleeper = [Floor(12,30,2)]
+Sleeper = Building(floor_list_sleeper,13,"Dorm","N/a","Sleeper Hall","275 Babcock Street",71.1206,42.3530)
+
+floor_list_claflin = [Floor(18,30,1)]
+Claflin = Building(floor_list_claflin,13,"Dorm","N/a","Claflin Hall","273 Babcock Street",71.1198,42.3525)
+
+floor_list_1019 = [Floor(8,20,2)]
+TenNineteen = Building(floor_list_1019,6,"Dorm","N/a","1019 Commonwealth Ave","1019 Commonwealth Avenue",71.1214,42.3521)
+
+floor_list_warren = [Floor(37,40,4)]
+Warren = Building(floor_list_warren,18,"Dorm","Food","Warren Towers","700 Commonwealth Avenue",71.1048,42.3495)
+
+floor_list_towers = [Floor(28,30,1),Floor(38,40,2)]
+Towers = Building(floor_list_towers,9,"Dorm","N/a","The Towers","140 Bay State Road",71.0998,42.35)
+
+floor_list_myles = [Floor(9,20,1)]
+Myles = Building(floor_list_myles,9,"Dorm","N/a","Myles Standish Hall","610 Beacon Street",71.0944,42.3496)
+
+floor_list_kilachand = [Floor(45,75,1)]
+Kilachand = Building(floor_list_kilachand,9,"Dorm","N/a","Kilachand Hall","91 Bay State Road",71.0944,42.3496)
+
+floor_list_danielsen = [Floor(17,20,1)]
+Danielsen = Building(floor_list_danielsen,10,"Dorm","N/a","Danielsen Hall","512 Beacon Street",71.8859,41.8026)
+
+floor_list_mugar = [Floor(85,115,1),Floor(198,206,2),Floor(65,80,3),Floor(55,80,4),Floor(28,50,5),Floor(18,40,6)]
+Mugar = Building(floor_list_mugar,6,"Library","N/a","Mugar Library","771 Commonwealth Avenue",71.108,42.351)
+
+floor_list_gsu = [Floor(145,250,1),Floor(78,125,2),Floor(80,60,3)]
+Gsu = Building(floor_list_gsu,3,"Food","Study","George Sherman Union","775 Commonwealth Avenue",71.1089,42.3509)
+
+floor_list21=[Floor(37,80,1),Floor(3,20,2),Floor(9,20,3)]
+Lse = Building(floor_list21,3,"School","N/a","LSE","24 Cummington Mall",71.1019,42.3485)
+
+floor_list_questrom=[Floor(62,80,1),Floor(63,100,2),Floor(79,150,3),Floor(26,40,4),Floor(9,20,5),Floor(0,20,6),Floor(23,150,7)]
+Questrom = Building(floor_list_questrom,7,"School","N/a","Questrom School of Business","595 Commonwealth Avenue",71.0995,42.3496)
+
+floor_list_law = [Floor(12,60,1),Floor(89,100,2),Floor(49,150,3),Floor(63,50,4),Floor(4,20,5)]
+Law = Building(floor_list_law,16,"School","N/a","Law Building","765 Commonwealth Avenue",71.1071,42.3509)
+
