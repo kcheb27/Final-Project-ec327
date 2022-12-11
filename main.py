@@ -319,6 +319,7 @@ for x in range(0,Claflin.no_floors_study):
     floorcap.append(Claflin.floor_study[x].capacity)
     floorpop.append(Claflin.floor_study[x].population)
 
+
 @app.route("/Claflin")
 def claflin():
     pic1 = os.path.join(app.config['UPLOAD_FOLDER'],'bulogo.png')
