@@ -3,7 +3,10 @@ from classes import Floor
 from classes import Building
 from openpyxl import load_workbook
 import os
-from location import get_distance
+from location import get_closest
+
+
+
 
 
 #####Loading Workbook################### 
@@ -49,6 +52,8 @@ for i in range(len(bigger_Data_sorted)):
     building_list.append(allvars[bigger_Data_sorted[i][0][10]])
 ##########################################################################################3
 
+list_of_indices = get_closest(building_list)
+
 
 
 
@@ -78,6 +83,17 @@ def home2():
     pic1 = os.path.join(app.config['UPLOAD_FOLDER'],'betterbetterbulogo.png')
     pic2 = os.path.join(app.config['UPLOAD_FOLDER'],'betterbulogo.png')
     return render_template("unhinged.html",name ="Tim",image =pic1,Page = "IGGGGGGGGGYYYYYY",image2 = pic2)    
+
+
+
+@app.route("/sorting")
+def sorting():
+    pic1 = os.path.join(app.config['UPLOAD_FOLDER'],'bulogo.png')
+    pic2 = os.path.join(app.config['UPLOAD_FOLDER'],'THEHAND.jpg')
+    return render_template("sorting.html",name ="Tim",image =pic1,Page = "Sorting",image2 = pic2,building1 = building_list[list_of_indices[0]].buildingname,building2 = building_list[list_of_indices[1]].buildingname,building3 = building_list[list_of_indices[2]].buildingname,building4 = building_list[list_of_indices[3]].buildingname,building5 = building_list[list_of_indices[4]].buildingname)
+
+
+
 
 floornumber = []
 floorcap = []
