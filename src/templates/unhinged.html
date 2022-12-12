@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        #object1{
+            max-width: fit-content;
+            max-height: 50px;
+
+            float:right
+        }
+        #object2{
+            max-width: fit-content;
+            max-height: 500px;
+
+           
+        }
+        hr {
+        height:5px;
+        border-width:0;
+        background-color:#000000;
+        }
+    </style>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{Page}}</title>
+</head>
+
+<body style="background-color: blanchedalmond;">
+    
+    <div>
+        
+        <h1 style = "font-family:Comic Sans MS;float:none; min-height:50px;color: white;background-color: darkred;border-color: black;">
+         
+                {{Page}}
+            
+            
+            <img  src ="{{image}}" id = "object1" max-height="1%;"/>
+        </h1>
+
+        
+        <center>
+            <img src = "{{image2}}" id = "object2"/>
+            <b1>
+                KEEPCODINGKEEPCODINGKEEPCODINGKEEPCODINGKEEPCODINGKEEPCODINGKEEPCODINGKEEPCODINGKEEPCODINGKEEPCODINGKEEPCODINGKEEPCODINGKEEPCODINGKEEPCODINGKEEPCODINGKEEPCODINGKEEPCODINGKEEPCODINGKEEPCODINGKEEPCODINGKEEPCODINGKEEPCODINGKEEPCODINGKEEPCODINGKEEPCODINGKEEPCODINGKEEPCODINGKEEPCODINGKEEPCODINGKEEPCODINGKEEPCODINGKEEPCODINGKEEPCODINGKEEPCODINGKEEPCODINGKEEPCODINGKEEPCODINGKEEPCODINGKEEPCODINGKEEPCODINGKEEPCODINGKEEPCODINGKEEPCODINGKEEPCODINGKEEPCODINGKEEPCODING
+                <br>KEEPCODINGKEEPCODINGKEEPCODINGKEEPCODINGKEEPCODINGKEEPCODINGKEEPCODINGKEEPCODINGKEEPCODINGKEEPCODINGKEEPCODINGKEEPCODINGKEEPCODING
+            </b1>  
+        </center>
+
+
+        <!--- this is where you change stuff-->
+        <center>
+        
+        
+        <button onclick="myFunction()"style="font-family:Comic Sans MS;height: 200px; width: 500px; border-radius:20% 60% 40% 80% / 60% 40% 80% 20%;"><font size="10">Display Building Options</font></button>
+        <p id="text" style="display:none">
+            <a href="{{url_for('gsu')}}">GSU</a>
+            <br><a href="{{url_for('stuvi1')}}">StuVi1</a>
+            <br><a href="{{url_for('metcalf')}}">Metcalf</a>
+            <br><a href="{{url_for('photonics')}}">Photonics</a>
+            <br><a href="{{url_for('wheelock')}}">Wheelock</a>
+            <br><a href="{{url_for('yawkey')}}">Yawkey</a>
+            <br><a href="{{url_for('htc')}}">Howard Therman Center</a>
+            <br><a href="{{url_for('cas')}}">College of Arts and Sciences</a>
+            <br><a href="{{url_for('cfa')}}">College of Fine Arts</a>
+            <br><a href="{{url_for('cgs')}}">College of General Studies</a>
+            <br><a href="{{url_for('com')}}">College of Communication</a>
+            <br><a href="{{url_for('epic')}}">EPIC</a>
+            <br><a href="{{url_for('rich')}}">Rich Residence hall</a>
+            <br><a href="{{url_for('sleeper')}}">Sleeper Residence hall</a>
+            <br><a href="{{url_for('claflin')}}">Claflin Residence hall</a>
+            <br><a href="{{url_for('tennineteen')}}">1019</a>
+            <br><a href="{{url_for('warren')}}">Warren Residence Hall</a>
+            <br><a href="{{url_for('towers')}}">Towers Residence Hall</a>
+            <br><a href="{{url_for('myles')}}">Myles Standish Hall</a>
+            <br><a href="{{url_for('kilachand')}}">Kilachand Honors Hall</a>
+            <br><a href="{{url_for('danielsen')}}">Danielsen Hall</a>
+            <br><a href="{{url_for('mugar')}}">Mugar Libary</a>
+            <br><a href="{{url_for('lse')}}">Life Science and Engineering</a>
+            <br><a href="{{url_for('questrom')}}">Questrom School of Buisness</a>
+            <br><a href="{{url_for('law')}}">Law Building</a>
+        </p>
+        </center>
+        <script>
+        function myFunction() {
+          var x = document.getElementById("text");
+          if (x.style.display === "none") {
+            x.style.display = "block";
+          } else {
+            x.style.display = "none";
+          }
+        }
+        </script>
+        <hr>
+        <center>
+            <h3 style = "float:bottom">
+                <a href="{{url_for('home')}}">GO BACK OH GOD</a>
+            </h3>
+            </center>
+        
+        <!--    please dont touch anywhere else-->
+  
+
+    </div>
+    
+
+</body>
+</html>
