@@ -3,6 +3,7 @@ from classes import Floor
 from classes import Building
 from openpyxl import load_workbook
 import os
+from location import get_location
 
 
 #####Loading Workbook################### 
