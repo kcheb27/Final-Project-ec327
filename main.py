@@ -4,11 +4,15 @@ from classes import Building
 from openpyxl import load_workbook
 import os
 
+
+#####Loading Workbook################### 
+######### Dynmaically imported Data from xlx file and reads it into the database 
+## Can alter data on the website by altering the xlsx file
+
 book = load_workbook('Website_data.xlsx')
 sheet = book.active
 rows = sheet.rows
 header = [cell.value for cell in next(rows)]
-
 
 All_The_Data = []
 for row in range(74):
@@ -39,13 +43,23 @@ for i in range(len(bigger_Data_sorted)):
         floorlist.append(Floor(bigger_Data_sorted[i][j][7],bigger_Data_sorted[i][j][6],bigger_Data_sorted[i][j][5]))
     #print(bigger_Data_sorted[0][0][10])
     allvars[bigger_Data_sorted[i][0][10]] = Building(floorlist,bigger_Data_sorted[i][0][4],bigger_Data_sorted[i][0][1],bigger_Data_sorted[i][0][2],bigger_Data_sorted[i][0][0],bigger_Data_sorted[i][0][3])
+##########################################################################################3
+
+
 
 app = Flask(__name__)
+
+
+
+
+## Image path creation for importing####
 picFolder = os.path.join('static','pics')
-
-
 app.config['UPLOAD_FOLDER'] = picFolder
+############################################
 
+
+
+############################routing for the different webpages############################################
 @app.route("/")
 def home():
     pic1 = os.path.join(app.config['UPLOAD_FOLDER'],'bulogo.png')
