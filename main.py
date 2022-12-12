@@ -3,7 +3,7 @@ from classes import Floor
 from classes import Building
 from openpyxl import load_workbook
 import os
-from location import get_location
+from location import get_distance
 
 
 #####Loading Workbook################### 
@@ -36,6 +36,8 @@ for i in range(len(All_The_Data)):
         Data_Sorted.append(All_The_Data[i])
 bigger_Data_sorted.append(Data_Sorted)
 
+
+building_list = []
 allvars = vars()
 for i in range(len(bigger_Data_sorted)):
     floorlist=[]
@@ -43,8 +45,12 @@ for i in range(len(bigger_Data_sorted)):
         x = 1
         floorlist.append(Floor(bigger_Data_sorted[i][j][7],bigger_Data_sorted[i][j][6],bigger_Data_sorted[i][j][5]))
     #print(bigger_Data_sorted[0][0][10])
-    allvars[bigger_Data_sorted[i][0][10]] = Building(floorlist,bigger_Data_sorted[i][0][4],bigger_Data_sorted[i][0][1],bigger_Data_sorted[i][0][2],bigger_Data_sorted[i][0][0],bigger_Data_sorted[i][0][3])
+    allvars[bigger_Data_sorted[i][0][10]] = Building(floorlist,bigger_Data_sorted[i][0][4],bigger_Data_sorted[i][0][1],bigger_Data_sorted[i][0][2],bigger_Data_sorted[i][0][0],bigger_Data_sorted[i][0][3],bigger_Data_sorted[i][0][9],bigger_Data_sorted[i][0][8])
+    building_list.append(allvars[bigger_Data_sorted[i][0][10]])
 ##########################################################################################3
+
+
+
 
 
 

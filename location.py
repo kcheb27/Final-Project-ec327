@@ -1,6 +1,6 @@
 
 import requests
-
+import math
 
 def get_ip():
     response = requests.get('https://api64.ipify.org?format=json').json()
@@ -16,7 +16,17 @@ def get_location():
     location_data =[longitude,latitude]
     return location_data
 
+def get_distance(x,y):
+    loc = get_location
+    return (math.acos(math.sin(y)*math.sin(loc[1])+math.cos(y)*math.cos(loc[1])*math.cos(loc[0]-x))*6371 )
 
+
+def get_closest(building):
+    indeces = []
+    values = []
+    for i in range(len(building)):
+        values.append(get_distance(building[i].x,building[i].y))
+        
 
 
 
