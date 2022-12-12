@@ -33,15 +33,18 @@
             <img  src ="{{image}}" id = "object1"/>
         </h1>
         <!--- this is where you change stuff-->
-        <img src ="{{image2}}" id ="object2" />
+        <center>
+            <img src ="{{image2}}" id ="object2" />
+            <br>{{Page}}
+        </center>
         <hr>
 
         <h2>
-            {{Page}} current status: {{population}} / {{capacity}} people
+            {{Page}} Current Status: {{population}} / {{capacity}} people
         </h2>
         
         <h3>
-            <br>Building type: {{BuildingType}} , {{subtype}}
+            <br>Building Type(s): {{BuildingType}} , {{subtype}}
             <br>Address is: {{address}}
         </h3>
         <hr>
@@ -54,8 +57,9 @@
         </h3>
         <p1>
         {%for i in range(0, number_studyfloors)%}
-        <br> floor number: {{current_floor[i]}}
+        <br> Floor Number: {{current_floor[i]}}
         <br> Status: {{current_pop[i]}} / {{current_cap[i]}} people
+        <br>
         {%endfor%}
         </p1>
         

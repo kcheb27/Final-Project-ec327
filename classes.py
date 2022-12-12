@@ -17,18 +17,23 @@ class Building:
         self.no_floors_study = len(floors)
         self.capacity = 0
         self.population = 0
-        for x in floors:
-            self.capacity = self.capacity + x.capacity
-            self.population = self.population + x.population
+        for i in range(len(floors)):
 
+            self.capacity += self.floor_study[i].capacity
+            self.population += self.floor_study[i].population
+         
+        
         self.type = buildingtype
         self.buildingname = name
         self.subtype = subtype
         self.address = address
         #self.x = x
         #self.y = y
- 
+    
 
+floors = [Floor(10,20,1),Floor(11,20,1)]
+
+x = Building(floors, 2, "tree", "na", "hi", "34")
 
 
 
