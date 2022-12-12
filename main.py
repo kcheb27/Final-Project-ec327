@@ -70,7 +70,7 @@ app.config['UPLOAD_FOLDER'] = picFolder
 @app.route("/")
 def home():
     pic1 = os.path.join(app.config['UPLOAD_FOLDER'],'bulogo.png')
-    pic2 = os.path.join(app.config['UPLOAD_FOLDER'],'THEHAND.jpg')
+    pic2 = os.path.join(app.config['UPLOAD_FOLDER'],'bostonu.webp')
     return render_template("index.html",name ="Tim",image =pic1,Page = "Home Page",image2 = pic2)
 
 @app.route("/unhinged")
