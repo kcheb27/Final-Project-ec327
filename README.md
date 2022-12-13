@@ -15,6 +15,6 @@ flask --app main run
 Once that is done Click the link provided in the terminal to access the website. 
 
 
-Youtube video link: 
+Youtube video link: https://youtu.be/3w_H-NOgEUQ
 
 
